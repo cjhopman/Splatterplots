@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="libs/jquery/css/smoothness/jquery-ui-1.8.19.custom.css" type="text/css"></link>
+		<link rel="stylesheet" href="vis.css" type="text/css"></link>
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="libs/jquery/js/jquery-ui-1.8.19.custom.min.js" type="text/css"></script>
+		<script type="text/javascript" src="libs/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="libs/jquery.vertical.js"></script>
+
+		<script type="text/javascript" src="libs/tdl/base.js"></script>
+		<script type="text/javascript">
+			tdl.require('tdl.buffers');
+			tdl.require('tdl.fast');
+			tdl.require('tdl.framebuffers');
+			tdl.require('tdl.fps');
+			tdl.require('tdl.log');
+			tdl.require('tdl.math');
+			tdl.require('tdl.models');
+			tdl.require('tdl.primitives');
+			tdl.require('tdl.programs');
+			tdl.require('tdl.textures');
+			tdl.require('tdl.webgl');
+		</script>
+
+		<script type="text/javascript" src="color.js"></script>
+		<script type="text/javascript" src="splatter.js"></script>
+
+		<meta name="keywords" content="cs838, webgl, visualization" />
+		<title>WebGL Splatterplots</title>
+	</head>
+
+	<body>
+		<div id="splatterDiv">
+			<canvas id="splatterCanvas2d" width="1400" height="670" class="splatterCanvas"></canvas>
+			<canvas id="splatterCanvas" width="1400" height="670" class="splatterCanvas"></canvas>
+		</div>
+		<div id="controls">
+            <table>
+                <tr valign="top">
+                    <td width="256">
+                        gridPixels:
+                        <div id="gridPixelsSlider"></div>
+                        threshold:
+                        <div id="thresholdSlider"></div>
+                        kdeSigma:
+                        <div id="kdeSigmaSlider"></div>
+                    </td>
+                    <td width="16">
+                    </td>
+                    <td width="256">
+                        pointRadius:
+                        <div id="pointRadiusSlider"></div>
+                        Lightness:
+                        <div id="combineLightnessSlider"></div>
+                        Chroma:
+                        <div id="combineChromaSlider"></div>
+                        LightnessAttenuate:
+                        <div id="combineAttenuateLightnessSlider"></div>
+                        ChromaAttenuate:
+                        <div id="combineAttenuateChromaSlider"></div>
+                        StrokeSize:
+                        <div id="combineStrokeSizeSlider"></div>
+                        Stripe Width:
+                        <div id="stripeWidthSlider"></div>
+                        Stripe Spacer:
+                        <div id="stripeSpacerSlider"></div>
+                    </td>
+                    <td width="16">
+                    </td>
+                    <td width="512">
+                        <div id="grouptoggle">
+                        </div>
+                    </td>
+                    <td width="256">
+                        <form>
+                            <div id="datasettoggle">
+                            </div>
+                        </form>
+                        <input id="filein" type="file" accept="text/csv" multiple>
+                    </td>
+                </tr>
+            </table>
+		</div>
+	</body>
+</html>
+
+
+
